@@ -236,7 +236,6 @@ window.addEventListener("load", function(){
         animate(0);
     }
 
-
     function toggleFullScreen(){
         console.log(document.fullscreenElement)
         if (!document.fullscreenElement){

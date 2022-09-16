@@ -7,9 +7,9 @@ export default class InputHandler{
                 break
                 case "ArrowRight": this.lastKey = "PRESS right";
                 break
-                case "ArrowUp": this.lastKey = "PRESS up";
-                break
                 case "ArrowDown": this.lastKey = "PRESS down";
+                break
+                case "ArrowUp": this.lastKey = "PRESS up";
                 break
             }
         });
@@ -19,9 +19,9 @@ export default class InputHandler{
                 break
                 case "ArrowRight": this.lastKey = "RELEASE right";
                 break
-                case "ArrowUp": this.lastKey = "RELEASE down";
-                break
                 case "ArrowDown": this.lastKey = "RELEASE down";
+                break
+                case "ArrowUp": this.lastKey = "RELEASE up";
                 break
             }
         });

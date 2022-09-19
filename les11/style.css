@@ -1,0 +1,19 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Halvatica", cursive;
+}
+body {
+    overflow: hidden;
+}
+#canvas1 {
+    top: 50%;
+    left: 50%;
+    border: 5px solid black;
+    position: absolute;
+    transform: translate(-50%, -50%);
+}
+#player {
+    display: none;
+}

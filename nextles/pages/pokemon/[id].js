@@ -4,22 +4,17 @@ import Link from "next/link";
 import { useRouter } from "next/router";
 import styles from "../../styles/Details.module.css";
 
-export default function Details(){
-    const { query: {id}, } = useRouter();
-
-
-    const [pokemon, setPokemon] = useState(null);
-
-    useEffect(() => {
-        async function getPokemon(){
-            const resp = await fetch(`https://jherr-pokemon.s3.us-west-1.amazonaws.com/index.json`);
-            setPokemon(await resp.json());
+export async function getServerSideProps({ params }){
+    const resp = await fetch(`https://jherr-pokemon.s3.us-west-1.amazonaws.com/index.json`);
+     return {
+        props: {
+            pokemon: await resp.json(),
         }
+    }
+}
 
-        if (id){
-            getPokemon();
-        }
-    }, [id]);
+export default function Details({ pokemon }){
+    
 
     if (!pokemon){
         return null;
@@ -33,7 +28,7 @@ export default function Details(){
     return (
         <div>
             <Head>
-                <title>{pokemon[id].name}</title>    
+                <title>{pokemon.name}</title>    
             </Head>
             <div>
                 <Link href="/">
@@ -43,13 +38,13 @@ export default function Details(){
             <div className={styles.layout}>
                 <div>
                     <img className={styles.picture}
-                    src={pokemon && pokemon[id].image}
-                    alt={pokemon[id].name.english}
+                    src={pokemon && pokemon.image}
+                    alt={pokemon.name.english}
                     />
                 </div>
                 <div>
-                    <div className={styles.name}>{pokemon[id].name}</div>
-                    <div className={styles.type}>{pokemon[id].type.join(", ")}</div>
+                    <div className={styles.name}>{pokemon.name}</div>
+                    <div className={styles.type}>{pokemon.type.join(", ")}</div>
                 </div>
                 
             </div>

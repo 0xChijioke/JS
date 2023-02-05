@@ -3,7 +3,6 @@ import { TypingText, TitleText, StartSteps } from "@/components";
 import { motion } from "framer-motion";
 import { staggerContainer, fadeIn, planetVariants } from "utils/motion";
 import styles from "../styles";
-import { useState } from "react";
 import { startingFeatures } from "../constants";
 
 const GetStarted = () => (

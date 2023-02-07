@@ -15,23 +15,28 @@ const WhatsNew = () => (
     className={`${styles.innerWidth} mx-auto flex lg:flex-row flex-col gap-8`}
     >
       <motion.div
-        variants={planetVariants("left")}
+        variants={fadeIn("right", "tween", 0.2, 1)}
+        className="flex-[0.75] flex justify-center flex-col">
+          <TypingText title="| What's new?" />
+          <TitleText title={<>What's new about the Metaverse?</>} />
+          <div className="mt-[48px] flex flex-wrap justify-between gap-[24px]">
+            {newFeatures.map((feature) => (
+              <NewFeatures
+                key={feature.title}
+                {...feature}
+              />
+            ))}
+        </div>
+      </motion.div>
+      <motion.div
+        variants={planetVariants("right")}
         className={`flex-1 ${styles.flexCenter}`}
       >
         <img 
-          src="/get-started.png"
-          alt="get-started"
+          src="/whats-new.png"
+          alt="what's new"
           className="w-[90%] h-[90%] object-contain"
         />
-      </motion.div>
-      <motion.div
-        variants={fadeIn("left", "tween", 0.2, 1)}
-        className="flex-[0.75] flex justify-center flex-col">
-          <TypingText title="| How Metaverse Works" />
-          <TitleText title={<>Get started with just a few clicks</>} />
-          <div className="mt-[31px] flex flex-col max-w-[370px] gap-[24px]">
-            
-        </div>
       </motion.div>
   </motion.div>
 </section>

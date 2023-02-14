@@ -20,7 +20,7 @@ const World = () => (
           title={<>Track friends</>}
           textStyles="text-center" />
           <motion.div
-            variants={fadeIn("up", "tween", 0.3, 1)}
+            variants={fadeIn("up", "tween", 0.5, 1)}
             className="relative mt-[60px] flex w-full ">
               <img
                 src="/map.png"

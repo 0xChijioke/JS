@@ -11,7 +11,7 @@ const InsightCard = ({ imgUrl, title, subtitle, index }) => (
       alt="planet-01"
       className="md:w-[270px] w-full h-[250px] rounded-[32px] object-cover"
     />
-    {/* <div className="w-full flex justify-between items-center">
+    <div className="w-full flex justify-between items-center">
       <div className="flex-1 md:ml-[62px] flex flex-col max-w-[650px]">
         <h4 className="font-normal lg:text-[42px] text-[26px] text-white">
           {title}
@@ -25,7 +25,7 @@ const InsightCard = ({ imgUrl, title, subtitle, index }) => (
           className="w-[40%] h-[40%] object-contain"
         />
       </div>
-    </div> */}
+    </div>
   </motion.div>
 );
 

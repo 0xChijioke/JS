@@ -1,4 +1,4 @@
-'use client';
+"use client";
 import styles from "../styles";
 import { TypingText, TitleText, InsightCard } from "@/components";
 import { motion } from "framer-motion";

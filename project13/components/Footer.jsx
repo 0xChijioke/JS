@@ -1,5 +1,6 @@
 'use client';
 
+
 const Footer = () => (
   <footer>
     footer

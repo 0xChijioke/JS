@@ -1,1 +1,4 @@
 git merge -s recursive -Xsubtree=packages/hardhat/contracts staging
+
+rename branch
+git branch -m <new-branch-name>

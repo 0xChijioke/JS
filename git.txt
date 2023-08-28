@@ -2,3 +2,10 @@ git merge -s recursive -Xsubtree=packages/hardhat/contracts staging
 
 rename branch
 git branch -m <new-branch-name>
+
+get git log
+git log
+git reflog
+
+reset branch
+$ git reset --hard origin/example-ui 
